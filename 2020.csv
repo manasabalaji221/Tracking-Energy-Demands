@@ -1,0 +1,107 @@
+"Data release date: March 2023
+Revised data release date: March 2024",,,,,,,,,
+"Table CE1.1  Summary annual household site consumption and expenditures in the United States—totals and intensities, 2020",,,,,,,,,
+,Number of housing units (million),Site energy consumptiona,,,,Energy expendituresa,,,
+,Total U.S.b,Total (trillion Btu),Per household (million Btu),Per household member (million Btu),Per square foot (thousand Btu),Total (billion dollars),Per household (dollars),Per household member (dollars),Per square foot (dollars)
+All homes,123.53,"9,481",76.8,31.3,42.2,232.76,"1,884",768,1.04
+Census region and division,,,,,,,,,
+Northeast,21.92,"1,956",89.2,36.8,48.8,49.60,"2,263",932,1.24
+New England,5.88,528,89.9,36.4,46.6,14.92,"2,539","1,028",1.32
+Middle Atlantic,16.04,"1,428",89.0,36.9,49.7,34.68,"2,162",896,1.21
+Midwest,27.04,"2,619",96.9,40.9,48.3,51.18,"1,892",798,0.94
+East North Central,18.55,"1,823",98.3,41.5,49.1,35.51,"1,915",808,0.96
+West North Central,8.50,796,93.7,39.5,46.4,15.66,"1,844",777,0.91
+South,46.84,"3,116",66.5,27.2,36.8,86.14,"1,839",753,1.02
+South Atlantic,24.84,"1,584",63.8,26.5,35.0,45.96,"1,850",770,1.01
+East South Central,7.38,523,70.9,30.3,37.7,13.89,"1,882",806,1.00
+West South Central,14.62,"1,009",69.0,26.9,39.7,26.30,"1,799",702,1.03
+West,27.72,"1,790",64.6,25.0,39.1,45.84,"1,653",641,1.00
+Mountain,9.22,727,78.9,31.4,42.7,15.24,"1,653",658,0.89
+Mountain North,4.62,413,89.5,34.9,44.4,6.80,"1,474",576,0.73
+Mountain South,4.60,314,68.3,27.7,40.6,8.43,"1,833",745,1.09
+Pacific,18.51,"1,063",57.4,22.0,37.0,30.60,"1,653",633,1.07
+Census urban/rural classificationc,,,,,,,,,
+Urban,100.44,"7,510",74.8,30.3,43.1,180.76,"1,800",728,1.04
+Urbanized area,89.24,"6,649",74.5,29.9,42.9,161.24,"1,807",726,1.04
+Urban cluster,11.20,861,76.9,33.1,44.9,19.52,"1,743",750,1.02
+Rural,23.09,"1,971",85.4,35.8,39.0,51.99,"2,252",945,1.03
+Climate regiond,,,,,,,,,
+Very cold/Cold,42.50,"4,044",95.2,39.9,48.0,82.82,"1,948",816,0.98
+Mixed-humid,36.79,"2,830",76.9,31.6,41.3,73.72,"2,004",824,1.08
+Mixed-dry/Hot-dry,15.06,887,58.9,22.3,37.9,26.07,"1,732",654,1.12
+Hot-humid,22.31,"1,306",58.6,23.6,34.8,39.57,"1,774",715,1.05
+Marine,6.87,413,60.2,24.1,37.5,10.57,"1,540",617,0.96
+Housing unit type,,,,,,,,,
+Single-family detached,77.07,"7,293",94.6,35.9,41.8,169.90,"2,205",836,0.97
+Single-family attached,7.45,500,67.1,27.6,41.6,12.32,"1,653",681,1.02
+Apartments in buildings with 2–4 units,9.34,500,53.5,22.2,54.7,13.14,"1,406",585,1.44
+Apartments in buildings with 5 or more units,22.84,769,33.7,17.9,37.2,25.28,"1,107",589,1.22
+Mobile homes,6.83,419,61.3,25.3,50.5,12.12,"1,773",731,1.46
+Ownership of housing unit,,,,,,,,,
+Owned,82.92,"7,501",90.5,35.9,41.6,177.03,"2,135",847,0.98
+Single-family,73.22,"6,950",94.9,37.0,41.2,161.09,"2,200",857,0.96
+Apartments,4.32,218,50.6,25.8,42.5,6.37,"1,474",754,1.24
+Mobile homes,5.38,333,61.8,26.5,49.4,9.57,"1,779",764,1.42
+Rentede,40.61,"1,980",48.8,21.0,44.8,55.72,"1,372",591,1.26
+Single-family,11.30,843,74.6,25.4,46.8,21.12,"1,869",636,1.17
+Apartments,27.86,"1,051",37.7,18.5,42.6,32.05,"1,151",563,1.30
+Mobile homes,1.45,86,59.5,21.3,55.1,2.54,"1,752",627,1.62
+Year of construction,,,,,,,,,
+Before 1950,20.26,"1,836",90.6,39.3,51.3,40.63,"2,006",869,1.14
+1950 to 1959,12.48,"1,058",84.8,35.5,50.1,24.31,"1,948",816,1.15
+1960 to 1969,12.76,980,76.8,32.3,47.0,23.64,"1,854",779,1.13
+1970 to 1979,18.34,"1,306",71.2,29.7,43.2,33.27,"1,814",756,1.10
+1980 to 1989,16.30,"1,086",66.6,27.7,39.2,29.38,"1,802",749,1.06
+1990 to 1999,17.16,"1,336",77.8,30.3,38.9,33.38,"1,946",757,0.97
+2000 to 2009,16.16,"1,236",76.5,29.0,35.9,31.15,"1,927",732,0.90
+2010 to 2015,5.53,360,65.1,24.5,32.5,9.56,"1,730",652,0.86
+2016 to 2020,4.56,284,62.3,24.1,31.2,7.44,"1,633",633,0.82
+Total square footagef,,,,,,,,,
+"Less than 1,000",30.01,"1,265",42.1,21.2,57.0,36.94,"1,231",620,1.66
+"1,000 to 1,499",28.08,"1,733",61.7,25.6,51.1,45.60,"1,624",674,1.34
+"1,500 to 1,999",22.22,"1,778",80.0,30.9,46.8,43.49,"1,957",757,1.14
+"2,000 to 2,499",15.62,"1,430",91.5,35.2,41.3,33.92,"2,172",836,0.98
+"2,500 to 2,999",10.31,"1,072",104.0,37.7,38.6,24.22,"2,349",851,0.87
+"3,000 or more",17.29,"2,203",127.4,44.5,32.3,48.59,"2,809",982,0.71
+Number of household members,,,,,,,,,
+1 member,33.59,"1,845",54.9,54.9,39.4,45.57,"1,357","1,357",0.97
+2 members,45.31,"3,554",78.4,39.2,40.9,86.16,"1,901",951,0.99
+3 members,18.27,"1,581",86.6,28.9,44.4,39.46,"2,160",720,1.11
+4 members,15.56,"1,443",92.8,23.2,44.3,35.24,"2,265",566,1.08
+5 members,6.44,611,94.9,19.0,45.1,15.25,"2,368",474,1.13
+6 or more members,4.37,446,102.2,15.0,49.1,11.07,"2,535",372,1.22
+2020 annual household income,,,,,,,,,
+"Less than $5,000",4.48,253,56.5,21.7,49.5,6.77,"1,512",580,1.33
+"$5,000 to $9,999",4.01,208,51.9,23.9,48.2,5.53,"1,379",636,1.28
+"$10,000 to $19,999",10.25,588,57.4,28.9,44.5,14.98,"1,462",735,1.13
+"$20,000 to $39,999",24.07,"1,568",65.1,29.7,44.7,38.84,"1,614",735,1.11
+"$40,000 to $59,999",19.61,"1,372",70.0,30.3,42.0,33.80,"1,724",747,1.03
+"$60,000 to $99,999",27.71,"2,178",78.6,31.1,42.1,53.34,"1,925",763,1.03
+"$100,000 to $149,999",16.54,"1,462",88.4,32.4,40.3,35.51,"2,147",786,0.98
+"$150,000 or more",16.86,"1,852",109.8,37.6,40.1,43.98,"2,608",893,0.95
+Payment method for energy bills,,,,,,,,,
+All paid by household,112.70,"8,982",79.7,31.9,42.0,218.40,"1,938",775,1.02
+"Some paid by household, some included in rent or condo fee",6.32,302,47.7,23.2,48.5,8.73,"1,380",672,1.40
+All included in rent or condo fee,4.34,183,42.2,22.4,43.8,5.36,"1,235",656,1.28
+Some other method,0.16,14,87.8,42.0,61.8,0.26,"1,646",787,1.16
+Main heating fuel,,,,,,,,,
+Natural gas,62.71,"5,996",95.6,38.1,48.2,122.40,"1,952",777,0.98
+Electricity,42.57,"2,081",48.9,20.7,31.6,70.13,"1,647",697,1.06
+Fuel oil or kerosene,4.93,547,110.8,46.1,51.5,14.51,"2,941","1,222",1.37
+Propane,5.21,512,98.2,41.3,43.7,13.94,"2,675","1,123",1.19
+Wood,2.25,115,50.9,20.3,25.6,3.77,"1,676",669,0.84
+Some other fuelg,Q,Q,Q,Q,Q,Q,Q,Q,Q
+Does not use heating equipment,5.79,229,39.5,15.1,31.1,7.94,"1,371",522,1.08
+,,,,,,,,,
+"Data source: U.S. Energy Information Administration, Office of Energy Demand and Integrated Statistics, Forms EIA-457A, D, E, F, & G of the 2020 Residential Energy Consumption Survey
+Notes:  Because of rounding, data may not sum to totals.  See RECS Terminology for definition of terms used in these tables. 
+Btu = British thermal units
+a Consumption and expenditures for biomass (wood), coal, district steam, and solar thermal are excluded. Electricity consumption from on-site solar photovoltaic generation (that is, solar panels) is included.
+b Total U.S. includes all primary occupied housing units in the 50 states and the District of Columbia. Vacant housing units, seasonal units, second homes, military houses, and group quarters are excluded.
+c Housing units are classified using criteria created by the U.S. Census Bureau based on 2010 Census data. Urbanized areas are densely settled groupings of blocks or tracts with 50,000 or more people, while urban clusters have at least 2,500 but less than 50,000 people. All other areas are rural.
+d The Building America program, sponsored by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE), created these climate regions. We combined climate regions for this publication. The Subarctic region is included with data for Very-cold/Cold.
+e Rented includes households that occupy their primary housing units without paying rent.
+f Total square footage includes all basements, finished or conditioned (heated or cooled) areas of attics, and conditioned garage space that is attached to the home. Unconditioned and unfinished areas in attics and attached garages are excluded. The square footage of the home is based on respondent reports. Previous RECS cycles calculated square footage based on interviewer measurements. For households that did not report an exact square footage estimate, the square footage of the home was imputed based on a reported square footage range and/or characteristics of the home. See 2020 RECS Square Footage Methodology for full details about data collection and processing.
+g Some other fuel includes coal and district steam.
+Q = Data withheld because either the relative standard error (RSE) was greater than 50% or fewer than 10 households in reporting sample.
+N = No households in reporting sample.          ",,,,,,,,,
