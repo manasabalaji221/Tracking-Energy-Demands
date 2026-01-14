@@ -1,0 +1,157 @@
+Tracking the energy demands:
+Analyzing the impact of climate on energy consumption in the U.S.A
+
+Description:
+This project explores the relationship between weather changes and the energy demands in different cities. This will enable them to optimize energy distribution, improve forecasting models, and better plan for future demand spikes, especially during extreme weather conditions. This project focuses on developing predictive models that help mitigate future energy consumption metrics to forecast needs in a better way based on upcoming weather patterns. By making use of K-means, I try to divide the weather stations across the US into different regions. I utilized the random forest method to predict the future energy consumption and costs. For a comparison, I also implemented the linear regression algorithm for predicting the future metrics. The linear regression gave better results in terms of the energy metrics prediction. 
+
+Objective:
+In this project, using the historical weather data along with the energy demands based on heating/ cooling systems, we can predict future climate changes as well as the energy consumption for the future. This will not only help us understand the temperature changes our planet is going to undergo, but also aims to provide valuable insights for utility companies. 
+
+Data Collection and Preprocessing:
+For this project, we need the weather data for the last few years. I used a Kaggle dataset that has the weather data in the US cities for the time period of 1990 to 2021.
+These observations provide comprehensive data for analyzing the daily climate patterns and trends across different regions of the United States over a span of nearly three decades. Researchers and climate enthusiasts can utilize this dataset to explore various aspects of weather conditions, such as temperature fluctuations, precipitation levels, and evaporation rates, and their spatial distribution across the country. Additionally, the inclusion of station identifiers and geographic coordinates facilitates spatial analysis and mapping of climatic phenomena.
+This dataset contains daily climate observations recorded across various stations in the United States from 1992 to 2021. Each record in the dataset includes the following information:
+ID: Station identification code uniquely identifying each weather station
+DATE: Date of the record in YYYY-MM-DD format.
+MAX: Maximum temperature measured in tenths of degrees Celsius.
+TMIN: Minimum temperature measured in tenths of degrees Celsius.
+EVAP: Evaporation of water from an evaporation pan measured in tenths of millimeters.
+PRCP: Precipitation measured in tenths of millimeters.
+Latitude: Latitude coordinates of the weather station in decimal degrees.
+Longitude: Longitude coordinates of the weather station in decimal degrees.
+Elevation: Elevation of the weather station measured in meters. Missing values are denoted as -999.9.
+
+We also have the energy consumption data from the U.S. Energy Information Administration, which provides state and city-wise data for the energy consumed by different categories of appliances like space-heating, cooling systems, water heating, etc. This dataset includes attributes such as the Number of housing units (million), Total site energy consumption for different categories (trillion Btu), Average site energy consumption for different categories, as mentioned above (million Btu per household using the end use)
+So, by combining the data from these two datasets, we will be able to make a wide range of analyses and predictions for the energy consumption in the future.
+Challenge: Since my first dataset did not have state/city data for each record, I used the latitude and longitude and mapped them into their corresponding states. For this, I used the U.S. Census TIGER/Line shapefiles.
+Weather station coordinates (latitude, longitude) were spatially joined to state boundary polygons using GeoPandas.
+This allowed accurate mapping of station-level climate data to U.S. states.
+
+Clustering the weather data:
+After assigning the state values to the weather station IDs, I aggregated the weather data into state level climate features and used K-Means clustering to cluster U.S. states based on weather patterns. 
+I chose to have 4 clusters since the US has 4 major regions - NorthEast, MidWest, South and West. I wanted to see if clustering based on weather would help us accurately cluster the states into these regions. 
+PCA is then applied to reduce dimensions and visually display the climate-based state clusters in a 2D plot.
+Principal Component 1 represents the direction of maximum variance in the climate data, capturing the strongest combined pattern of temperature and precipitation differences among states.
+Principal Component 2 captures the next most important, independent pattern of variation, explaining secondary climate differences not captured by PC1(like evaporation, etc).
+After clustering, we can notice that the states that fall within a cluster do seem to have similar weather conditions. Like Texas and Florida for example, both states are known for higher temperature summers.
+
+         
+
+CLUSTER    AVG_TEMP	MAX_TEMP   MIN_TEMP     TOTAL_PRCP
+                                               
+0       		 11.450796  	17.375601   	    5.525596           253474.244697
+1        		 17.082277     23.275843         10.890974         352453.559259
+2                       6.270852       12.321939          0.219118            202943.554074
+3                       21.046936     27.076273         15.017083          885909.055556
+
+State to region mapping:
+After clustering, I map the states into one of the 4 regions. I used the 4 general United States regions instead of the clustered result. The reason behind this is that the regions would then have equal distribution. Also, the Energy Information Administration dataset has a column for region, so we can use a similar mapping in the weather data as well, so that we can combine both datasets. 
+
+REGION
+West         35502352
+South        31884398
+Midwest      26544082
+Northeast     7940849
+Name: count, dtype: int64
+            ID       DATE   TMAX   TMIN  EVAP   PRCP  Latitude  Longitude  \
+0  US1OKCV0021 2007-04-18    NaN    NaN   NaN  241.0   35.1715   -97.4262   
+1  US1MDHW0012 2015-10-14    NaN    NaN   NaN    0.0   39.3387   -76.9468   
+2  USR0000AGOP 2011-03-07  -28.0 -200.0   NaN    NaN   64.2381  -145.2669   
+3  USC00201675 2012-09-26  200.0  100.0   NaN    0.0   41.9622   -84.9925   
+4  USC00230657 2007-05-10  267.0  139.0   NaN    3.0   37.0539   -93.5756   
+
+   Elevation  YEAR STATE  TMAX_C  TMIN_C  TAVG_C  MONTH   REGION  
+0      355.1  2007    OK     NaN     NaN     NaN      4    South  
+1      166.1  2015    MD     NaN     NaN     NaN     10    South  
+2      463.3  2011    AK    -2.8   -20.0   -11.4      3     West  
+3      299.9  2012    MI    20.0    10.0    15.0      9  Midwest  
+4      399.3  2007    MO    26.7    13.9    20.3      5  Midwest  
+      REGION  YEAR  AVG_TEMP   MAX_TEMP  MIN_TEMP  TOTAL_PRCP
+0    Midwest  2005  9.816376  15.915360  3.716562  21914690.0
+1    Midwest  2009  8.211020  14.102508  2.323742  46987302.0
+2    Midwest  2015  9.689005  15.715528  3.663923  56672793.0
+3    Midwest  2020  9.583826  15.579288  3.594600  53294829.0
+4  Northeast  2005  8.852088  14.492492  3.216023   9607962.0
+
+
+Using Linear Regression for future data prediction:
+By using the historical data recorded from the weather stations and also the energy data for the last few decades, about 2000-2020, I trained a linear regression model separately for each U.S. region.
+Linear Regression models the relationship between time and climate/energy variables, assuming a steady long-term trend based on historical data.
+Independent Variable (X): YEAR – the model predicts future values based on time progression.
+Dependent Variables (Y): Multiple features like AVG_TEMP, MAX_TEMP, MIN_TEMP, TOTAL_PRCP, TOTAL_SITE_ENERGY_QUAD_BTU, ENERGY_PER_HH_MBTU, and TOTAL_EXPENDITURE_BILLION.
+
+Model Type: LinearRegression from scikit-learn, which estimates coefficients (slope) and intercept to fit a straight line minimizing the mean squared error.
+The model forecasted the temperature, humidity, precipitation, energy consumption and expenditure for the future years 2025 and 2030. 
+This approach helps assess long-term climate trends and their potential impact on regional energy demand.
+We categorize households as low consumption, medium and high consumption households, to plan for a better electricity usage.
+
+Random Forest for future energy prediction:
+Random Forest is an ensemble learning technique that builds multiple decision trees and averages their predictions to reduce overfitting and improve accuracy.
+Using random forest I was able to plot a comparison of actual vs predicted temperatures in a line plot.
+Feature importance highlights which factors most influence the average temperature. The temperature was the most useful feature compared to others.
+Random Forest captures non-linear relationships and can reveal key drivers of temperature variability (e.g., TMAX_C is usually the most important feature).
+
+n_estimators=100,  builds 100 trees in the forest.
+random_state=42, ensures reproducibility.
+n_jobs=-1, uses all CPU cores for faster training.
+
+Data was split into train and test set:
+Train/test split of 80/20 using train_test_split without shuffling, preserving temporal order.
+
+
+Random Forest MAE: 6.562399999999992
+Random Forest RMSE: 7.217785848859742
+Random Forest R²: 0.8206110688268589
+
+
+
+Linear Regression - Predicted values for 2025 and 2030:
+REGION AVG_TEMP_2025 AVG_TEMP_2030 MAX_TEMP_2025  MAX_TEMP_2030  \
+0    Midwest       9.633773       9.752542      15.606386      15.712001   
+1  Northeast       9.750652      10.093021      15.419233      15.777212   
+2      South      17.681860      17.889981      23.521358      23.643144   
+3       West       9.076412       9.051995      15.661347      15.626290   
+
+   MIN_TEMP_2025  MIN_TEMP_2030  \
+0       3.668153       3.801749   
+1       4.086136       4.413353       
+2      11.839842      12.133177       
+3       2.491471       2.475207     
+
+TOTAL_SITE_ENERGY_QUAD_BTU_2025 TOTAL_SITE_ENERGY_QUAD_BTU_2030  \
+0                        56.373250                        66.057859   
+1                        52.764092                        61.708834   
+2                        38.009082                        44.311663   
+3                        34.043728                        39.936367   
+
+   ENERGY_PER_HH_MBTU_2025  ENERGY_PER_HH_MBTU_2030  \
+0                14.849331                14.101912   
+1                13.265201                17.699426   
+2                16.247036                 13.677247   
+3                18.403250                 16.737859   
+
+   TOTAL_EXPENDITURE_BILLION_2025  TOTAL_EXPENDITURE_BILLION_2030  
+0                     1094.301205                     1293.563442  
+1                     1321.198700                     1553.264857  
+2                     1063.983098                     1247.843136  
+3                      882.347342                     1050.026692
+
+
+
+
+
+
+
+
+Conclusion and future work:
+In this project, I tried using different clustering and regression techniques to forecast.  
+For the predictions, the linear regression worked well, predicting the future energy consumptions.
+The drawbacks I had with this project was that the dataset was limited. The energy consumption data are not available online in a good format for years before 2000. This caused over-fitting problems.
+For the future, I can expand this project to consider different energy sources like renewable energy to consider how well different sources work in different regions.
+Also, I can consider extreme conditions like natural calamities or major accidents that can impact energy consumption.
+I can work on how different cities utilize energy in different ways, for example major cities like NYC might utilize more energy towards public places rather than households.
+
+References:
+https://www.eia.gov/consumption/residential/data/2020/index.php?view=consumption
+https://www.kaggle.com/datasets/nachiketkamod/weather-dataset-us
+https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
